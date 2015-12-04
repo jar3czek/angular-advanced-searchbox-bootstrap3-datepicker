@@ -71,9 +71,9 @@ angular.module('angular-advanced-searchbox', [])
                                 key: searchParam.key,
                                 name: searchParam.name,
                                 placeholder: searchParam.placeholder,
-                                isDate: searchParam.isDate,
                                 value: value || '',
-                                editMode: enterEditModel
+                                editMode: enterEditModel,
+                                isDate: searchParam.isDate
                             }
                         );
 
@@ -185,8 +185,10 @@ angular.module('angular-advanced-searchbox', [])
                                 $scope.model.query = $scope.searchQuery;
 
                             angular.forEach($scope.searchParams, function (param) {
-                                if (param.value !== undefined && param.value.length > 0)
+                                if (param.value !== undefined && param.value.length > 0) {
                                     $scope.model[param.key] = param.value;
+                                    //$scope.model[param.isDate] = param.isDate;
+                                }
                             });
                         }, 500);
                     }
