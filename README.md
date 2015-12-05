@@ -10,7 +10,7 @@ A directive for AngularJS providing a advanced visual search box.
 Include with bower
 
 ```sh
-bower install angular-advanced-searchbox
+bower install angular-advanced-searchbox--bootstrap3-datepicker
 ```
 
 The bower package contains files in the ```dist/```directory with the following names:
